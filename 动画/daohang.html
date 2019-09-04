@@ -38,7 +38,6 @@
 	<body>
 		<div id="box" >
 		     <lee></lee>
-		     <lee></lee>
 		</div>
 		<template id="lee">
 			<div style="position: relative;">
@@ -46,14 +45,14 @@
 					  首页
 				</div>
 				<transition :name="t_t1">
-				<div style="position: absolute;top: 60px;left: 0;width: 100%;background: #000;z-index: 2;" v-show="no1_t">
+				<div style="position: absolute;top: 60px;left: 25%;width: 50%;background: red;z-index: 2;" v-show="no1_t">
 				      <div v-for="i in arr" style="color: #FFFFFF;line-height: 50px;text-align: center;position: relative;">
 				      	 {{i.title}}  <span style="position: absolute;top: 0;right: 40px;" v-if="i.arr.length" @click="c_no2(i.arr)">></span>
 				      </div>
 				</div>
 				</transition>
 				<transition name="no3">
-				<div style="position: absolute;top: 60px;left: 0;width: 100%;background: #000;" v-show="no2_t">
+				<div style="position: absolute;top: 60px;left: 25%;width: 50%;background: red;" v-show="no2_t">
 					 <div style="color: #FFFFFF;line-height: 50px;text-align: center;position: relative;" @click="c_no3">
 				      	返回上一级  
 				      </div>
