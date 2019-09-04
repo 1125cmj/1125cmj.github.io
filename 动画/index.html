@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.lee-enter {
+				left: -500px !important;
+				opacity: 0;
+			}
+			
+			.lee-enter-active {
+				transition: all 1s;
+			}
+		
+			.lee-leave-active {
+				transition: all 1s;
+			}
+			
+			.lee-leave-to {
+				left: 500px !important;
+				opacity: 0;
+			}
+			
+			
+			
+			.lee2-enter {
+				left: 500px !important;
+				opacity: 0;
+			}
+			
+			.lee2-enter-active {
+				transition: all 1s;
+			}
+		
+			.lee2-leave-active {
+				transition: all 1s;
+			}
+			
+			.lee2-leave-to {
+				left: -500px !important;
+				opacity: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box" >
+			<lee style="text-align: center;"></lee>
+		</div>
+		<template id="lee">
+			<div>
+				<button @click="no1">下一个</button> {{type}}
+				<button @click="no2">上一个</button>
+				<div style="width: 500px;margin: 0 auto;position: relative;">
+
+					<transition :name="t_type" v-for="(i,$index) in arr">
+						<div style="width: 500px;position: absolute;left: 0;top: 0;" v-show="type==$index">
+							<img :src="i" style="width: 500px;float: left;" />
+						</div>
+					</transition>
+
+				</div>
+
+			</div>
+		</template>
+	</body>
+	<script src="vue.js"></script>
+	<script>
+		Vue.component('lee', {
+			template: '#lee',
+			methods:{
+				no1(){
+					this.t_type='lee'
+					this.type++
+					if(this.type>=4){
+						this.type=0
+					}
+				},
+				no2(){
+					this.t_type='lee2'
+					this.type--
+					if(this.type<=-1){
+						this.type=3
+					}
+				}
+			},
+			data() {
+				return {
+					type: 0,
+					t_type:'lee',
+					arr: [
+						'tou1.jpg',
+						'7 (2).jpg',
+						'2 (2).jpg',
+						'6 (2).jpg'
+
+					]
+				}
+			}
+		})
+
+		new Vue({
+			el: "#box"
+		})
+	</script>
+
+</html>
