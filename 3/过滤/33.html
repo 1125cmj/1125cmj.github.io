@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<input type="text" v-model="value"/>
+			<div v-for="i in arr">
+				{{i|cc}}
+			</div>
+		</div>
+	</body>
+	<script src="vue.js"></script>
+	
+	<script>
+		Vue.filter('cc',function(a,b,c){
+			return a+'/.//////////'
+		})
+		
+		new Vue({
+			el:'#box',
+			data:{
+				arr:['sdsdsdsd','adddsdsd','sdsadsa']
+				
+			}
+		})
+		
+	</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="box">
+			<input type="text" v-model="value" />
+			<div v-c-lee="value">
+				
+			</div>
+		</div>
+	</body>
+	
+	<script src="vue.js"></script>
+	<script>
+		Vue.directive('cLee',{
+			bind(a,b){
+				console.log(a,b)
+			},
+			inserted(a,b){
+				console.log(a,b,'no2')
+			},
+			update(a,b){
+				console.log(a,b,'no3')
+				a.innerHTML=b.value
+			},
+			componentUpdated(a,b){
+				console.log(a,b,'no4')
+			}
+		})
+		
+		
+		new Vue({
+			el:'#box',
+			data:{
+				arr:[
+					'诛仙诛仙诛仙','奥特曼诛仙'
+				],
+				value:'a'
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<input type="text" v-model="a"/>
+			<input type="text" v-model="b"/>
+			
+			<ul>
+				<li v-for="(i,$index) in 10" @click="index=$index">
+					{{i}}
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="vue.js"></script>
+	<script>
+		new Vue({
+			el:'#box',
+			data:{
+				a:12,
+				index:0,
+				b:0
+			},
+			beforeUpdate(){
+				console.log(this.a,'ss')
+			},
+			updated(){
+				console.log(this.a,'sss')
+			},
+			watch:{
+				a(a,b){
+					console.log(a,b)
+				},
+				index(a){
+					console.log(a)
+				}
+			}
+		})
+	</script>
+</html>

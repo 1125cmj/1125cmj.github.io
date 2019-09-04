@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<div @click="btn">
+				{{num}}
+			</div>
+			<lee :ee='num'></lee>
+		</div>
+		
+		<template id="lee">
+			<div @click="btn">
+				sdnfjd{{num}}
+			</div>
+		</template>
+	</body>
+	<script src="vue.js"></script>
+	<script src="vue-router.js"></script>
+	<script>
+		
+		
+		Vue.component('lee',{
+			template:'#lee',
+			props:['ee'],
+			data(){
+				return{
+					num:this.ee
+				}
+			},
+			methods:{
+				btn(){
+					this.num++
+				}
+			},
+			watch:{
+				ee(a,b){
+					this.num=a
+				}
+			}
+		})
+		
+		
+		new Vue({
+			el:'#box',
+			data:{
+				num:0
+			},
+			methods:{
+				btn(a){
+					this.num=a
+				}
+			}
+		})
+	</script>
+</html>

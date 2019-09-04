@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="box">
+			<button @click="ajax()">请求数据</button>
+			
+			<div style="width: 70%;border: 1px solid #000000;" v-for="i in arr">
+				<div class="title">
+					<p>{{i.text}}</p>
+					<p>时间：{{i.created_at}}</p>
+					<img :src="i.cdn_img" style="width: 100%"/>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="vue.js"></script>
+	<script src="vue-resource.js"></script>
+
+	<script>
+		new Vue({
+			el: '#box',
+			data:{
+				arr:[]
+			},
+			methods: {
+				ajax() {
+					this.$http.get('https://www.apiopen.top/satinApi', {
+						params: {
+							id: 27610708,
+							page: 1
+						}
+
+					}).then(
+						(data) => {
+							console.log(data)
+							this.arr=data.data.data
+						}
+					)
+				}
+			}
+		})
+	</script>
+
+</html>

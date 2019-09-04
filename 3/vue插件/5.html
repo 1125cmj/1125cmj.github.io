@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="box">
+			<div>
+				<h3>汽车</h3>
+				<div v-for="i in arr.auto" style="width: 50%;border: 1px solid #000000;">
+					<span>标题：{{i.title}}</span><br />
+					<span>发表时间：{{i.ptime}}</span>
+					<img :src="i.picInfo[0].url" style="width: 100%"/>
+					<p>{{i.digest}}</p>
+				</div>
+			</div>
+			<div>
+				<h3>推荐</h3>
+				<div v-for="i in arr.dy" style="width: 50%;border: 1px solid #000000;">
+					<span>标题：{{i.title}}</span><br />
+					<span>发表时间：{{i.ptime}}</span>
+					<img :src="i.picInfo[0].url" style="width: 100%"/>
+					<p>{{i.digest}}</p>
+				</div>
+				<div v-for="i in arr.ent" style="width: 50%;border: 1px solid #000000;">
+					<span>标题：{{i.title}}</span><br />
+					<span>发表时间：{{i.ptime}}</span>
+					<!--<img :src="i.picInfo[0].url" style="width: 100%"/>-->
+					<p>{{i.digest}}</p>
+				</div>
+				<div v-for="i in arr.sports" style="width: 50%;border: 1px solid #000000;">
+					<span>标题：{{i.title}}</span><br />
+					<span>发表时间：{{i.ptime}}</span>
+					<img :src="i.picInfo[0].url" style="width: 100%"/>
+					<p>{{i.digest}}</p>
+				</div>
+				<div v-for="i in arr.war" style="width: 50%;border: 1px solid #000000;">
+					<span>标题：{{i.title}}</span><br />
+					<span>发表时间：{{i.ptime}}</span>
+					<img :src="i.picInfo[0].url" style="width: 100%"/>
+					<p>{{i.digest}}</p>
+				</div>
+			</div>
+			
+			<div>
+				<h3>财经</h3>
+				<div v-for="i in arr.money" style="width: 50%;border: 1px solid #000000;">
+					<span>标题：{{i.title}}</span><br />
+					<span>发表时间：{{i.ptime}}</span>
+					<!--<img :src="i.picInfo[0].url" style="width: 100%"/>-->
+					<p>{{i.digest}}</p>
+				</div>
+			</div>
+			
+			<div>
+				<h3>科技</h3>
+				<div v-for="i in arr.tech" style="width: 50%;border: 1px solid #000000;">
+					<span>标题：{{i.title}}</span><br />
+					<span>发表时间：{{i.ptime}}</span>
+					<!--<img :src="i.picInfo[0].url" style="width: 100%"/>-->
+					<p>{{i.digest}}</p>
+				</div>
+			</div>
+			<div>
+				<h3>新闻</h3>
+				<div v-for="i in arr.toutiao" style="width: 50%;border: 1px solid #000000;">
+					<span>标题：{{i.title}}</span><br />
+					<span>发表时间：{{i.ptime}}</span>
+					<p>{{i.digest}}</p>
+				</div>
+			</div>
+			
+			
+		</div>
+	</body>
+	<script src="vue.js"></script>
+	<script src="vue-resource.js"></script>
+	<script>
+		new Vue({
+			el: '#box',
+			data: {
+				arr: []
+			},
+			mounted() {
+				this.$http.get('https://www.apiopen.top/journalismApi').then(
+					(data) => {
+						console.log(data.data.data)
+						this.arr = data.data.data
+					}
+				)
+			}
+		})
+	</script>
+
+</html>

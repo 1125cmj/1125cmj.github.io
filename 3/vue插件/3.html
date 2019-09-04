@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<button @click="ajax()">请求数据</button>
+			
+			<div v-for="i in arr" style="width: 50%;border-bottom: 1px solid #CCCCCC;">
+				<h3>《{{i.bookname}}》</h3>
+				<p>作者名：{{i.author_name}}</p>
+				<span>类型：{{i.class_name}}</span>
+				<img :src="i.book_cover"/>
+				<p>内容：{{i.book_info}}</p>
+			</div>
+		</div>
+	</body>
+	<script src="vue.js"></script>
+	<script src="vue-resource.js"></script>
+	<script>
+		
+		new Vue({
+			el:'#box',
+			data:{
+				arr:[]
+			},
+			methods:{
+				ajax(){
+					this.$http.get('https://www.apiopen.top/novelApi',{
+						
+					}).then(
+						(data)=>{
+							console.log(data)
+							this.arr=data.data.data
+						}
+					)
+				}
+			}
+		})
+		
+	</script>
+</html>

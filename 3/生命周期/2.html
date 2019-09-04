@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<button @click="a=12">点击</button>
+			
+			{{a}}
+		</div>
+	</body>
+	<script src="vue.js"></script>
+	<script>
+		
+		var vm=new Vue({
+			el:'#box',
+			data:{
+				a:'hello',
+			},
+			beforeCreate(){
+				console.log('创建前',this.a)
+			},
+			created(){
+				console.log('创建后',this.a)
+			},
+			beforeMount(){
+				
+				console.log('渲染前',this.a)
+			},
+			mounted(){
+				
+				console.log('渲染后',this.a)
+			},
+			
+			beforeUpdate(){
+				console.log('更新前',this.a)
+			},
+			updated(){
+				
+				console.log('更新后',this.a)
+			},
+			beforeDestroy(){
+				console.log('销毁前',this.a)
+			},
+			destroyed(){
+				console.log('销毁前',this.a)
+			}
+		})
+		
+		
+		vm.$destroy()
+	</script>
+</html>
