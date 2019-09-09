@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1567830270644'); /* IE9 */
+  src: url('iconfont.eot?t=1567830270644#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQ0AAsAAAAACKAAAAPnAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqFCIQyATYCJAMMCwgABCAFhG0HNxt5B8iOkVuMOJZf/lfi4WssfX93D9ElClCi4/FRmajIKFYpjo9qPSlbYUmxZKE7d5VT96yAwqwQgxRA2ZFslivLBbQC5Okv/C4xvAKvIjzb/P/3Tv8okWheoJzm2PjpnQDTAimgMTYHkmcFkqC3DK91qQs6T6BpXhx0XFHXBriCTAvEpVJOAx4zKiWVoS5Uc9YW8RIs1dOD5BGAF+734x+kBE5Sycjck4vyQSj6Ce8eYKY1kx4bA1F/drCbyNgACnGe6zyD+ckNmKastCgvrCpC6iuyNsMVKvKq/odHEkQVUbYxfSWV+AmmMFQ9APFei05uchUD4BNA9AXTGOlbdFYd3JCfg0M0kC46Zm67/fTKm6lXsJfpdf7+8FOv8l6Bab8HmjuI3r5tNxZ6ILPX3beFV9+Kbwo63ryhMha8fk2+etVGz+6aX/Awn489NLPffBC9eeOOtjjuuYK6xcUIanZ2bs6DfB3c0U+hk3nGNE3pshdrd+/3gflLOu3cQS8kztrqyg4lbRcum6+KV6YukWeuiFfNl02XqF37TP35xAO0LfA9PtPmwNS+fbihy35qVpyzc+gdbQtfIvZ3VMVAlLo/qqYuQqqNoCvKduxsTx4bH/nulLoKq26O6FXPsd6UqnDBLhks9107I8OoCFobISUvTDQjzToJKWmzDc0IGKgNke8RMnDnzEfVXZQQXxE1CZpuamCqE/5z/OQzgN338+ZnCwGSZadfhn6ngS0BZwf6nEtt7dIP57YfU/iE02Qm3YWuTQQgen/KwHfrf3ZlxpBO9Awc/ts+sh1NhLxeevPlItvUDJ1ToHZeKuMEb09aiBrxKr7Ixf558HP7ENy9kCYelz0uLx6yubHHetJx0roHB5SOXAYDADMx38U2AZDfYt5/xG88v7ul7nfK+4vbFfB5ofm/G5yJBeqn6hKs6P2LaiJFkRBTLpLQFGqZ7AEc7i4f+JzKW6+GoeX27gkI7aHOiQCSmjnI6hbwQt+AipZNqKrbg6Z1lZtbRniYKA2sGUUQ+o5C0vUOsr7HeKEvQcXUV6jqBwZNp+G2Z8tSKG1LeYYWmEFCuolQyjgda1gEW6+yhZEbNTQflbhMiuENygiRnJCUzFQyOobvY4FhvTxFEFiC5TktUYEuYzQajtDznIqRCQkKQdDnJCayeU9KkHFasHWEx6AJGIMIUpsQlGQ4OqzdWmCb+nwLhpyRBo0voZR5KQyegbJ3QrIESTXwSqWuFuVcBhusJ5dCIGCpSSweR4tQAXaGRk9yCPr8USoMGUECRYu4Xo5E3Iytq0wYX629vh3QRI7MkSJHUbvn4mWcfhMmNW4CAAA=') format('woff2'),
+  url('iconfont.woff?t=1567830270644') format('woff'),
+  url('iconfont.ttf?t=1567830270644') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1567830270644#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wo-copy:before {
+  content: "\e6ca";
+}
+
+.icon-buy:before {
+  content: "\e600";
+}
+
