@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>app</title>
+		<link rel="stylesheet" type="text/css" href="swiper-4.4.1/dist/css/swiper.min.css" />
+		<script src="https://webapi.amap.com/maps?v=1.4.14&key=5ac9b5555ec2e60b1c9c2b7b416cada2"></script>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css"/>
+	</head>
+
+	<body>
+		<div id="app"></div>
+		<script src="./dist/build.js"></script>
+		<script src="swiper-4.4.1/dist/js/swiper.min.js"></script>
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				direction: 'horizontal', // 垂直切换选项
+				loop: true, // 循环模式选项
+				autoplay:true,
+
+				// 如果需要分页器
+				pagination: {
+					el: '.swiper-pagination',
+				},
+
+			})
+		</script>
+		<script>
+			var map = new AMap.Map('ditu', {
+				resizeEnable: true, //是否监控地图容器尺寸变化
+				zoom: 11, //初始化地图层级
+				center: [116.397428, 39.90923] //初始化地图中心点
+			});
+		</script>
+	</body>
+
+</html>
